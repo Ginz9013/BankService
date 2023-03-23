@@ -15,6 +15,19 @@ public class BankServiceImpl implements BankService{
 
     @Override
     public void deposit(Bank bank, int depositAmount) {
+
+//        確認帳號
+        if(bank.getAccount() == null || bank.getAccount().equals("")) {
+            System.err.println("請輸入帳號");
+            return;
+        }
+
+//        確認金額
+        if(depositAmount <= 0) {
+            System.err.println("金額不可少於0");
+            return;
+        }
+
         System.out.println("帳號: " + bank.getAccount());
         System.out.printf("取款 %d 元\n", depositAmount);
         int amount = bank.getAmount() + depositAmount;
@@ -25,6 +38,19 @@ public class BankServiceImpl implements BankService{
 
     @Override
     public void withdraw(Bank bank, int withdrawAmount) {
+
+//        確認金額
+        if(bank.getAccount() == null || bank.getAccount().equals("")) {
+            System.err.println("請輸入帳號");
+            return;
+        }
+
+//        確認金額
+        if(withdrawAmount <= 0) {
+            System.err.println("金額不可少於0");
+            return;
+        }
+
         System.out.println("帳號: " + bank.getAccount());
         System.out.printf("取款 %d 元\n", withdrawAmount);
 
