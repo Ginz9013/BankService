@@ -8,23 +8,16 @@ import java.util.Map;
 public class Menu {
     private Map<String, Integer> menuList = new LinkedHashMap<>();
 
-    private List<String> orderList = new ArrayList<>();
-
     public Menu() {
-        menuList.put("beef", 100);
-        menuList.put("pork", 90);
-        menuList.put("chicken", 80);
+//        menuList.put("beef", 100);
+//        menuList.put("pork", 90);
+//        menuList.put("chicken", 80);
+    }
+    public void setMenuList(String item, int price) {
+        menuList.put(item, price);
     }
 
-    public Map<String, Integer> getMenu() {
+    public Map<String, Integer> getMenuList() {
         return this.menuList;
     }
-
-    public void setOrder(String order) {
-        orderList.add(order);
-    }
-
-    public List<String> getOrder(){
-        return this.orderList;
-    };
 }

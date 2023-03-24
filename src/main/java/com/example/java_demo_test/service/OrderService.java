@@ -9,7 +9,5 @@ public interface OrderService {
 
     void order(Menu menu, String item, int amount);
 
-    void showTotalPrice(Menu menu);
-
     void showOrderList(Menu menu);
 }

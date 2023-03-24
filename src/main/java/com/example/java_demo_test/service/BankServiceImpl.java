@@ -39,7 +39,7 @@ public class BankServiceImpl implements BankService{
     @Override
     public void withdraw(Bank bank, int withdrawAmount) {
 
-//        確認金額
+//        確認帳號
         if(bank.getAccount() == null || bank.getAccount().equals("")) {
             System.err.println("請輸入帳號");
             return;
